@@ -3,7 +3,7 @@ import streamlit as st
 from keras.models import load_model
 import tensorflow as tf
 
-def predict_flores(data):
+def predict_flo(data):
     # Cargar el modelo previamente entrenado para predecir el tipo de flor
     model = pickle.load(open('models/iris_model.pkl', "rb"))
     # Realizar la predicción con los datos proporcionados
@@ -28,3 +28,6 @@ def check_client_id(client_id):
     api_key = st.secrets["DB_USERNAME"]
     ls_ids = [123,12345,12345678]
     return True if client_id in ls_ids else False
+
+def predict_emocion(imagen):
+    return 'Sal de casa que estas palido'
