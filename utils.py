@@ -3,7 +3,7 @@ import streamlit as st
 from keras.models import load_model
 import tensorflow as tf
 
-def predict_flo(data):
+def predict_fl(data):
     # Cargar el modelo previamente entrenado para predecir el tipo de flor
     model = pickle.load(open('models/iris_model.pkl', "rb"))
     # Realizar la predicción con los datos proporcionados
